@@ -1,13 +1,15 @@
 
 import random
 
+plaintext = input("Enter text: ")
+
 def find_char(text):
     results = []
     lines = text.split('\n')
     
     for line_number, line in enumerate(lines, start=1):
         for index, char in enumerate(line):
-            if char == 'a':
+            if char == plaintext:
                 results.append((line_number, index))
                 
     return results
