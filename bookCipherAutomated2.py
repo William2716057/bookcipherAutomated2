@@ -1,4 +1,6 @@
 
+import random
+
 def find_a(text):
     results = []
     lines = text.split('\n')
@@ -15,5 +17,9 @@ sdfgsfdghsaaafg"""
 
 positions = find_a(text)
 
-for line_number, index in positions:
+if positions:
+    random_position = random.choice(positions)
+    line_number, index = random_position
     print(f"{line_number}: {index}")
+else:
+    print("No 'a' found in the text.")
