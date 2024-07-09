@@ -18,21 +18,26 @@ def find_char(text, characters):
                 
     return results
 
-plaintext = get_valid_input("Enter one or more characters: ")
+plaintext = get_valid_input("Enter characters: ")
 
 
 with open("sample.txt", "r") as file:
     text = file.read()
-    
-#text = """fasdfgadfdga
-#sdfgsfdghsaaafg"""
 
 positions = find_char(text, plaintext)
+
+
+
+output = ""
 
 for char, pos_list in positions.items():
     if pos_list:
         random_position = random.choice(pos_list)
         line_number, index = random_position
-        print(f"{line_number}:{index}")
+        output += f"{char}: {line_number}:{index}\n"
     else:
-        print(f"'{char}' not found in the text.")
+        output += f"'{char}' not found in the text.\n"
+
+# Write the results to "results.txt"
+with open("results.txt", "w") as file:
+    file.write(output)
