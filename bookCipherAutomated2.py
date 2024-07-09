@@ -1,7 +1,7 @@
 
 import random
 
-def find_a(text):
+def find_char(text):
     results = []
     lines = text.split('\n')
     
@@ -15,7 +15,7 @@ def find_a(text):
 text = """fasdfgadfdga
 sdfgsfdghsaaafg"""
 
-positions = find_a(text)
+positions = find_char(text)
 
 if positions:
     random_position = random.choice(positions)
