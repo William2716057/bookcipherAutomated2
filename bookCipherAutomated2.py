@@ -36,7 +36,7 @@ for char, pos_list in positions.items():
         line_number, index = random_position
         output += f"{line_number}:{index}\n"
     else:
-        output += f"'{char}'\n"
+        output += f"{char}\n"
 
 # Write the results to "results.txt"
 with open("results.txt", "w") as file:
