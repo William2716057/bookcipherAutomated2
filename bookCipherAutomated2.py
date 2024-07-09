@@ -34,9 +34,9 @@ for char, pos_list in positions.items():
     if pos_list:
         random_position = random.choice(pos_list)
         line_number, index = random_position
-        output += f"{char}: {line_number}:{index}\n"
+        output += f"{line_number}:{index}\n"
     else:
-        output += f"'{char}' not found in the text.\n"
+        output += f"'{char}'\n"
 
 # Write the results to "results.txt"
 with open("results.txt", "w") as file:
