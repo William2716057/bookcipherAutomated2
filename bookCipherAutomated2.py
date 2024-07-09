@@ -22,4 +22,4 @@ if positions:
     line_number, index = random_position
     print(f"{line_number}: {index}")
 else:
-    print("No 'a' found in the text.")
+    print("Not found in the text.")
