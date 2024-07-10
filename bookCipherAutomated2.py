@@ -1,4 +1,6 @@
 import random
+#does not repeat function for repeated characters
+#could encode unfound characters
 
 #input prompts
 def get_valid_input(prompt):
