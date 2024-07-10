@@ -33,7 +33,8 @@ positions = find_char(text, plaintext)
 #initialise output
 output = ""
 #get random character positions
-for char, pos_list in positions.items():
+for char in plaintext:
+    pos_list = positions.get(char, [])
     if pos_list:
         random_position = random.choice(pos_list)
         line_number, index = random_position
